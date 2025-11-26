@@ -416,3 +416,35 @@ participant DB as H2 Database
 * JUnit 5
 * Mockito
 * Gradle
+
+
+
+## **🚀 Deploy en Render (Docker)**
+
+El proyecto fue desplegado utilizando Render mediante un Dockerfile multistage, lo que permite construir y ejecutar la aplicación de forma aislada y optimizada.
+**🔗 URLs del Proyecto en Producción**
+
+-----------------------------------------------------------------------------------------------------------
+**Recurso**	                                         **URL**
+API Base	                              |      https://mutantes-qhrd.onrender.com
+Swagger UI (Documentación)	              |      https://mutantes-qhrd.onrender.com/swagger-ui/index.html
+POST /mutant	                          |      https://mutantes-qhrd.onrender.com/mutant
+GET /stats	                              |      https://mutantes-qhrd.onrender.com/stats
+------------------------------------------------------------------------------------------------------------
+
+![render-swagger.png](docs/img/render-swagger.png)
+
+
+**🐳 Dockerfile utilizado**
+
+El deploy se realizó con un Dockerfile multistage que:
+
+* Compila la aplicación con Gradle en una imagen base de Java (etapa build)
+* Copia solo el JAR final a una imagen ligera (etapa runtime)
+* Reduce el tamaño y acelera el inicio del servicio
+* Expone el puerto 8080 para que Render pueda servir la API
+--------------------------------------------------------------------------------------------------------------
+## **✅ Conclusión** 
+
+Este proyecto permitió integrar conocimientos de arquitectura backend, pruebas automatizadas y despliegue en la nube. La API cumple con los requisitos funcionales solicitados y fue empaquetada mediante Docker y desplegada en Render utilizando un enfoque multistage. El resultado final es un servicio estable, documentado con Swagger y accesible públicamente, demostrando un flujo completo de desarrollo profesional.
+
