@@ -425,11 +425,13 @@ El proyecto fue desplegado utilizando Render mediante un Dockerfile multistage, 
 **🔗 URLs del Proyecto en Producción**
 
 -----------------------------------------------------------------------------------------------------------
+```
 **Recurso**	                                         **URL**
 API Base	                              |      https://mutantes-qhrd.onrender.com
 Swagger UI (Documentación)	              |      https://mutantes-qhrd.onrender.com/swagger-ui/index.html
 POST /mutant	                          |      https://mutantes-qhrd.onrender.com/mutant
 GET /stats	                              |      https://mutantes-qhrd.onrender.com/stats
+```
 ------------------------------------------------------------------------------------------------------------
 
 ![render-swagger.png](docs/img/render-swagger.png)
