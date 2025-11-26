@@ -294,14 +294,21 @@ El proyecto incluye:
 ✔ Casos límite (bordes, NxN, solapamientos)
 
 
-📊 Cobertura total: ~88%
+📊 Cobertura total: ~91%
 
-![jacoco.png](docs/img/jacoco.png)
+![jacoco_reports.png](docs/img/jacoco_reports.png)
 
 Los reportes se generan en:
 
-/build/reports/tests/
-/build/reports/jacoco/test/html/
+/build/reports/tests/jacoco/test/html/
+
+Comando: 
+
+./gradlew test
+
+          
+./gradlew test jacocoTestReport
+
 
 ## **8. 📊 Diagramas de Secuencia**
 

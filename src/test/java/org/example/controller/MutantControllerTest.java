@@ -300,6 +300,89 @@ class MutantControllerTest {
                 .andExpect(status().isBadRequest());
     }
 
+
+    @Test
+    @DisplayName("Cobertura: DnaRequest equals/hashCode y toString")
+    void testDnaRequestCoverage() {
+        String[] dna1 = {"ATGC", "CGTA"};
+        String[] dna2 = {"ATGC", "CGTA"};
+        String[] dna3 = {"AGCT", "TCGA"};
+
+        DnaRequest req1 = new DnaRequest();
+        req1.setDna(dna1);
+
+        DnaRequest req2 = new DnaRequest();
+        req2.setDna(dna2);
+
+        DnaRequest req3 = new DnaRequest();
+        req3.setDna(dna3);
+
+        // 1. Cubrir equals() (true y false) y hashCode()
+        assertEquals(req1, req2, "Dos DnaRequests con el mismo ADN deben ser iguales.");
+        assertEquals(req1.hashCode(), req2.hashCode(), "El hash code debe ser el mismo.");
+        assertNotEquals(req1, req3, "Dos DnaRequests con diferente ADN no deben ser iguales.");
+        assertNotEquals(req1.hashCode(), req3.hashCode(), "Los hash codes deben ser diferentes.");
+
+        // 2. Cubrir toString()
+        assertNotNull(req1.toString(), "El método toString no debe ser nulo.");
+    }
+
+
+    @Test
+    @DisplayName("Cobertura: Llama a todos los paths de equals() y hashCode() de ErrorResponse")
+    void testErrorResponseLombokCoverage() {
+        LocalDateTime now = LocalDateTime.now();
+
+        // Objeto base
+        ErrorResponse e1 = new ErrorResponse(now, 400, "Bad", "Msg", "/path");
+
+        // Objeto con mismos valores
+        ErrorResponse e2 = new ErrorResponse(now, 400, "Bad", "Msg", "/path");
+
+        // Objeto con diferente status
+        ErrorResponse e3 = new ErrorResponse(now, 500, "Bad", "Msg", "/path");
+
+        // 1. Cubrir hashCode() y equals(true)
+        assertEquals(e1, e2, "Objetos con mismos valores deben ser iguales.");
+        assertEquals(e1.hashCode(), e2.hashCode(), "El hash code debe ser el mismo.");
+
+        // 2. Cubrir equals(obj) y equals(null)
+        assertTrue(e1.equals(e1), "Objeto debe ser igual a sí mismo."); // Cubre una rama
+        assertFalse(e1.equals(null), "Objeto no debe ser igual a null."); // Cubre la rama de null
+
+        // 3. Cubrir equals(diferente clase)
+        assertFalse(e1.equals("diferente"), "Debe ser diferente a una cadena."); // Cubre la rama de ClassCheck
+
+        // 4. Cubrir equals(false)
+        assertNotEquals(e1, e3, "Objetos con diferente status deben ser diferentes.");
+
+        // 5. Cubrir toString()
+        assertNotNull(e1.toString(), "El método toString no debe ser nulo.");
+    }
+
+
+
+    @Test
+    @DisplayName("Cobertura: Fuerza ramas de equals(Object) en ErrorResponse")
+    void testErrorResponseInheritanceBranches() {
+        LocalDateTime now = LocalDateTime.now();
+        ErrorResponse e1 = new ErrorResponse(now, 400, "Bad", "Msg", "/path");
+
+        assertFalse(e1.equals(null), "Debe retornar false al comparar con null.");
+        Object differentClass = new Object();
+        assertFalse(e1.equals(differentClass), "Debe retornar false al comparar con diferente clase.");
+
+        assertTrue(e1.equals(e1), "Debe retornar true al comparar consigo mismo.");
+
+
+        e1.setStatus(500);
+        e1.setTimestamp(now.minusSeconds(1));
+    }
+
+
+
+
+
     // Helpers
 
 

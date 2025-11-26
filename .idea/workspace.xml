@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8f6a39e0-4bff-47a8-8774-134c18075125" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/img/jacoco_reports.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/DnaRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/DnaRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/controller/MutantControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/controller/MutantControllerTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ExamenMercado" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="35nFwRpgMMxWbPecxDJsQKwXeqj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.C:/Users/lenovo/IdeaProjects/ExamenMercado/build.gradle.executor": "Run",
+    "Gradle.ExamenMercado [:org.example.MutantDetectorApplication.main()].executor": "Run",
+    "Gradle.ExamenMercado [bootRun].executor": "Run",
+    "Gradle.ExamenMercado [test jacocoTestReport].executor": "Run",
+    "Gradle.ExamenMercado.executor": "Run",
+    "Gradle.MutantControllerTest (1).executor": "Run",
+    "Gradle.MutantControllerTest.deserializaCorrectamenteElDto.executor": "Run",
+    "Gradle.MutantControllerTest.devuelveBadRequestDnaNull.executor": "Run",
+    "Gradle.MutantControllerTest.devuelveBadRequestSiEsMuyPequenio.executor": "Run",
+    "Gradle.MutantControllerTest.executor": "Run",
+    "Gradle.MutantControllerTest.guardaHumanoSinSecuenciasYDevuelveForbidden.executor": "Run",
+    "Gradle.MutantControllerTest.mutanteDiagonalAscendente.executor": "Run",
+    "Gradle.MutantControllerTest.mutanteVertical.executor": "Run",
+    "Gradle.MutantControllerTest.testDTOCoverageLombok.executor": "Run",
+    "Gradle.MutantControllerTest.testDnaRecordCoverage.executor": "Run",
+    "Gradle.MutantControllerTest.testDnaRequestCoverage.executor": "Run",
+    "Gradle.MutantControllerTest.testErrorInternoPorFalloDeHash.executor": "Run",
+    "Gradle.MutantControllerTest.testErrorResponseInheritanceBranches.executor": "Run",
+    "Gradle.MutantControllerTest.testErrorResponseLombokCoverage.executor": "Run",
+    "Gradle.MutantControllerTest.verificaCamposDeLaEntidad.executor": "Run",
+    "Gradle.MutantControllerTest.verificaErrorResponseGenerado.executor": "Run",
+    "Gradle.MutantControllerTest.verificaSerializacionDeStatsResponse.executor": "Run",
+    "Gradle.MutantDetectorTest.arregloConFilaNula.executor": "Run",
+    "Gradle.MutantDetectorTest.diagonalYVertical.executor": "Run",
+    "Gradle.MutantDetectorTest.executor": "Run",
+    "Gradle.MutantDetectorTest.humanoMatrizGrandeSinSecuencias.executor": "Run",
+    "Gradle.MutantDetectorTest.mutanteEnBordesInferiores.executor": "Run",
+    "Gradle.MutantDetectorTest.solapamientoDiagonalAscendente.executor": "Run",
+    "Gradle.MutantDetectorTest.solapamientoDiagonalDescendente.executor": "Run",
+    "Gradle.MutantServiceTest.executor": "Run",
+    "Gradle.MutantServiceTest.testLombokCoverage.executor": "Run",
+    "Gradle.StatsServiceTest.executor": "Run",
+    "Gradle.StatsServiceTest.ratioIgualACero.executor": "Run",
+    "Gradle.StatsServiceTest.ratioMayorAUno.executor": "Run",
+    "Gradle.StatsServiceTest.ratioSoloHumanos.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/lenovo/IdeaProjects/ExamenMercado/docs/img",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lenovo\IdeaProjects\ExamenMercado\docs\img" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ExamenMercado [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootRun" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="MutantControllerTest.testDnaRequestCoverage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.controller.MutantControllerTest.testDnaRequestCoverage&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="MutantControllerTest.testErrorInternoPorFalloDeHash" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.controller.MutantControllerTest.testErrorInternoPorFalloDeHash&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="MutantControllerTest.testErrorResponseInheritanceBranches" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.controller.MutantControllerTest.testErrorResponseInheritanceBranches&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="MutantControllerTest.testErrorResponseLombokCoverage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.controller.MutantControllerTest.testErrorResponseLombokCoverage&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.MutantControllerTest.testErrorResponseInheritanceBranches" />
+        <item itemvalue="Gradle.MutantControllerTest.testErrorResponseLombokCoverage" />
+        <item itemvalue="Gradle.MutantControllerTest.testDnaRequestCoverage" />
+        <item itemvalue="Gradle.MutantControllerTest.testErrorInternoPorFalloDeHash" />
+        <item itemvalue="Gradle.ExamenMercado [bootRun]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8f6a39e0-4bff-47a8-8774-134c18075125" name="Changes" comment="" />
+      <created>1763738167123</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1763738167123</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/controller/MutantControllerTest.java</url>
+          <line>409</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
