@@ -36,14 +36,17 @@ Direcciones válidas:
 * Diagonal ascendente ↗
 
 Regla:
+
+
 ✔ 2 o más secuencias → Mutante (200 OK)
+
 ✘ 0 o 1 secuencia → No mutante (403 Forbidden)
 
 ## **2. 🏗 Arquitectura General**
 
 El proyecto implementa una arquitectura en capas, con responsabilidades bien separadas:
 
-
+``` 
 Mutantes/
 │
 ├── 📂 src/main/java/org/example/
@@ -99,7 +102,7 @@ Mutantes/
 ├── gradlew / gradlew.bat            ← Scripts Gradle
 ├── CLAUDE.md                         ← Guía técnica
 └── README.md                         ← Este archivo
-
+``` 
 ### Diagrama de Capas
 
 ```
@@ -108,10 +111,10 @@ Mutantes/
 └──────────────────────────┬──────────────────────────────────┘
                            │ HTTP Request (JSON)
                            ↓
-┌─────────────────────────────────────────────────────────────┐
-│  CAPA 1: CONTROLLER                                         │
-│  📁 controller/MutantController.java                        │
-│                                                              │
+┌────────────────────────────────────────────────────────────┐
+│  CAPA 1: CONTROLLER                                        │
+│  📁 controller/MutantController.java                       │
+│                                                            │
 │  ✅ Recibe requests HTTP (POST /mutant, GET /stats)        │
 │  ✅ Valida datos de entrada (@Validated)                   │
 │  ✅ Retorna respuestas HTTP (200, 403, 400)                │
@@ -120,69 +123,69 @@ Mutantes/
                            │ DnaRequest
                            ↓
 ┌─────────────────────────────────────────────────────────────┐
-│  CAPA 2: DTO (Data Transfer Objects)                       │
+│  CAPA 2: DTO (Data Transfer Objects)                        │
 │  📁 dto/DnaRequest.java                                     │
 │  📁 dto/StatsResponse.java                                  │
-│                                                              │
-│  ✅ Define contratos de API (Request/Response)             │
-│  ✅ Validaciones personalizadas (@ValidDnaSequence)        │
-│  ✅ Conversión JSON ↔ Java (Jackson)                       │
+│                                                             │
+│  ✅ Define contratos de API (Request/Response)              │
+│  ✅ Validaciones personalizadas (@ValidDnaSequence)         │
+│  ✅ Conversión JSON ↔ Java (Jackson)                        │
 └──────────────────────────┬──────────────────────────────────┘
                            │ String[] dna
                            ↓
 ┌─────────────────────────────────────────────────────────────┐
-│  CAPA 3: SERVICE (Lógica de Negocio)                       │
+│  CAPA 3: SERVICE (Lógica de Negocio)                        │
 │  📁 service/MutantService.java                              │
 │  📁 service/MutantDetector.java                             │
 │  📁 service/StatsService.java                               │
-│                                                              │
-│  ✅ Lógica de negocio principal                            │
-│  ✅ Algoritmo de detección de mutantes                     │
-│  ✅ Cálculo de hash SHA-256                                │
-│  ✅ Orquestación entre capas                               │
+│                                                             │
+│  ✅ Lógica de negocio principal                             │
+│  ✅ Algoritmo de detección de mutantes                      │
+│  ✅ Cálculo de hash SHA-256                                 │
+│  ✅ Orquestación entre capas                                │
 └──────────────────────────┬──────────────────────────────────┘
                            │ DnaRecord (entidad)
                            ↓
-┌─────────────────────────────────────────────────────────────┐
+┌────────────────────────────────────────────────────────────┐
 │  CAPA 4: REPOSITORY (Acceso a Datos)                       │
-│  📁 repository/DnaRecordRepository.java                     │
-│                                                              │
+│  📁 repository/DnaRecordRepository.java                    │
+│                                                            │
 │  ✅ Interfaz JPA (Spring Data)                             │
 │  ✅ Métodos de consulta automáticos                        │
 │  ✅ findByDnaHash(), countByIsMutant()                     │
-└──────────────────────────┬──────────────────────────────────┘
+└──────────────────────────┬─────────────────────────────────┘
                            │ SQL Queries
                            ↓
 ┌─────────────────────────────────────────────────────────────┐
-│  CAPA 5: ENTITY (Modelo de Datos)                          │
+│  CAPA 5: ENTITY (Modelo de Datos)                           │
 │  📁 entity/DnaRecord.java                                   │
-│                                                              │
-│  ✅ Mapeo Objeto-Relacional (ORM)                          │
-│  ✅ Anotaciones JPA (@Entity, @Table, @Column)             │
-│  ✅ Definición de índices                                  │
+│                                                             │
+│  ✅ Mapeo Objeto-Relacional (ORM)                           │
+│  ✅ Anotaciones JPA (@Entity, @Table, @Column)              │
+│  ✅ Definición de índices                                   │
 └──────────────────────────┬──────────────────────────────────┘
                            │ JDBC
                            ↓
 ┌─────────────────────────────────────────────────────────────┐
 │  CAPA 6: BASE DE DATOS                                      │
 │  💾 H2 Database (en memoria)                                │
-│                                                              │
+│                                                             │
 │  Tabla: dna_records                                         │
-│  ├── id (PK, auto-increment)                               │
-│  ├── dna_hash (unique, indexed)                            │
-│  ├── is_mutant (boolean, indexed)                          │
-│  └── created_at (timestamp)                                │
+│  ├── id (PK, auto-increment)                                │
+│  ├── dna_hash (unique, indexed)                             │
+│  ├── is_mutant (boolean, indexed)                           │
+│  └── created_at (timestamp)                                 │
 └─────────────────────────────────────────────────────────────┘
 
 ┌─────────────────────────────────────────────────────────────┐
-│  CAPAS TRANSVERSALES                                         │
+│  CAPAS TRANSVERSALES                                        │
 │  📁 exception/GlobalExceptionHandler.java                   │
 │  📁 validation/ValidDnaSequenceValidator.java               │
 │  📁 config/SwaggerConfig.java                               │
-│                                                              │
-│  ✅ Manejo de errores global                               │
+│                                                             │
+│  ✅ Manejo de errores global                                │
 │  ✅ Validaciones custom                                     │
-│  ✅ Configuración de Swagger                               │
+│  ✅ Configuración de Swagger                                │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -192,10 +195,15 @@ Mutantes/
 Implementado en MutantDetector, optimizado mediante:
 
 ✔ Conversión previa a char[][] para acceso O(1)
+
 ✔ Recorrido de matriz una sola vez
+
 ✔ Early Termination: si hay 2 secuencias → corta
+
 ✔ Manejo de límites para evitar IndexOutOfBounds
+
 ✔ Detección en 4 direcciones
+
 ✔ Detección de solapamientos (AAAAA = 2 secuencias)
 
 
@@ -274,11 +282,17 @@ http://localhost:8080/h2
 El proyecto incluye:
 
 ✔ Tests unitarios del algoritmo
+
 ✔ Tests del Service (con mocks)
+
 ✔ Tests del Controller (WebMvcTest)
+
 ✔ Tests del StatsService
+
 ✔ Validaciones e inputs inválidos
+
 ✔ Casos límite (bordes, NxN, solapamientos)
+
 
 📊 Cobertura total: ~88%
 
